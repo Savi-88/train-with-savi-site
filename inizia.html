@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inizia il tuo percorso – Train with Savi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #0B0B0B;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+      text-align: left;
+      margin: 15px 0 5px;
+    }
+    input, select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 10px;
+    }
+    button {
+      background: #E02020;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      font-weight: bold;
+      border-radius: 50px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .plans {
+      margin-top: 40px;
+    }
+    .plans div {
+      background: #111;
+      padding: 20px;
+      margin: 10px auto;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Inizia il tuo cambiamento</h1>
+  <p>Scopri in quanto tempo puoi ottenere il tuo fisico ideale con un piano su misura.</p>
+
+  <form id="ai-form">
+    <label for="gender">Sei:</label>
+    <select id="gender" required>
+      <option value="">-- Seleziona --</option>
+      <option value="uomo">Uomo</option>
+      <option value="donna">Donna</option>
+    </select>
+
+    <label for="age">Età:</label>
+    <input type="number" id="age" min="16" max="80" required />
+
+    <label for="weight">Peso attuale (kg):</label>
+    <input type="number" id="weight" required />
+
+    <label for="height">Altezza (cm):</label>
+    <input type="number" id="height" required />
+
+    <label for="activity">Stile di vita:</label>
+    <select id="activity" required>
+      <option value="">-- Seleziona --</option>
+      <option value="sedentario">Sedentario</option>
+      <option value="attivo">Attivo</option>
+      <option value="molto-attivo">Molto attivo</option>
+    </select>
+
+    <label for="goal">Obiettivo:</label>
+    <select id="goal" required>
+      <option value="">-- Seleziona --</option>
+      <option value="dimagrire">Dimagrire</option>
+      <option value="massa">Aumentare massa</option>
+      <option value="definizione">Definizione</option>
+    </select>
+
+    <button type="button" onclick="calcolaPiano()">Genera il mio piano</button>
+  </form>
+
+  <div class="result" id="output"></div>
+
+  <div class="plans" id="plans" style="display:none;">
+    <h2>Piani consigliati</h2>
+    <div>💪 1 mese – €29 <br> Prova il cambiamento</div>
+    <div>🔥 3 mesi – €69 <br> Risultato visibile garantito</div>
+    <div>🚀 6 mesi – €119 <br> Trasformazione completa</div>
+    <div>🏆 12 mesi – €199 <br> Mantenimento e stile di vita</div>
+    <button onclick="alert('Pagamento non ancora attivo')">Attiva ora il tuo piano</button>
+  </div>
+
+  <script>
+    function calcolaPiano() {
+      const weight = parseFloat(document.getElementById('weight').value);
+      const height = parseFloat(document.getElementById('height').value);
+      const goal = document.getElementById('goal').value;
+
+      let output = '';
+      let weeks = 0;
+
+      if(goal === 'dimagrire'){
+        weeks = Math.ceil((weight * 0.1) / 0.5); // 0.5 kg a settimana
+        output = `🎯 Puoi perdere circa ${Math.floor(weight * 0.1)} kg in ${weeks} settimane.`;
+      }
+      else if(goal === 'massa'){
+        weeks = Math.ceil((weight * 0.08) / 0.3); // 0.3 kg a settimana
+        output = `💪 Puoi aumentare circa ${Math.floor(weight * 0.08)} kg di massa magra in ${weeks} settimane.`;
+      }
+      else if(goal === 'definizione'){
+        weeks = Math.ceil((weight * 0.07) / 0.4); // media
+        output = `🏆 Puoi ottenere un corpo definito in circa ${weeks} settimane.`;
+      }
+
+      document.getElementById('output').innerText = output;
+      document.getElementById('plans').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

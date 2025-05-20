@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Acquista - Trasforma il tuo corpo con Train with Savi</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #eee;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #f04e30;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    color: #f04e30;
+  }
+  main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  main h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #f04e30;
+  }
+  main p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+  .highlight {
+    color: #f04e30;
+    font-weight: 700;
+  }
+  .plans {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .plan {
+    background: #222;
+    border-radius: 10px;
+    padding: 25px;
+    flex: 1 1 300px;
+    box-shadow: 0 0 10px #f04e3080;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  .plan:hover {
+    transform: scale(1.05);
+  }
+  .plan h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #f04e30;
+  }
+  .plan .price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 10px 0 20px 0;
+  }
+  .plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+    width: 100%;
+  }
+  .plan ul li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+  .plan ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #f04e30;
+    font-weight: 700;
+  }
+  .btn-purchase {
+    background: #f04e30;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  .btn-purchase:hover {
+    background: #d23d22;
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #666;
+    background: #1f1f1f;
+    border-top: 2px solid #f04e30;
+    margin-top: 60px;
+  }
+  @media (max-width: 600px) {
+    .plans {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Train with Savi</h1>
+</header>
+
+<main>
+  <h2>Realizza il tuo sogno fisico con noi</h2>
+  <p>Se sei qui è perché vuoi <span class="highlight">trasformare il tuo corpo</span> in modo reale, duraturo e senza compromessi. Non vendiamo illusioni, ma <strong>piani personalizzati di allenamento, alimentazione e supporto continuo</strong> per farti raggiungere i risultati che hai sempre desiderato.</p>
+
+  <p>Il nostro metodo è studiato per accompagnarti in ogni fase: dalla motivazione iniziale, all’aumento di massa, fino alla definizione ottimale. Con il nostro abbonamento avrai accesso a:</p>
+
+  <ul>
+    <li>Piani personalizzati su misura per te</li>
+    <li>Allenamenti quotidiani guidati da AI Coach</li>
+    <li>Consigli alimentari bilanciati e aggiornati</li>
+    <li>Supporto e motivazione tramite community esclusiva</li>
+    <li>Accesso a contenuti extra, sfide e aggiornamenti continui</li>
+  </ul>
+
+  <div class="plans">
+    <div class="plan">
+      <h3>Abbonamento Mensile</h3>
+      <div class="price">€29,99 / mese</div>
+      <ul>
+        <li>Accesso completo a tutti i piani</li>
+        <li>Supporto AI personalizzato</li>
+        <li>Accesso alla community</li>
+      </ul>
+      <a href="#" class="btn-purchase">Acquista ora</a>
+    </div>
+
+    <div class="plan">
+      <h3>Abbonamento Annuale</h3>
+      <div class="price">€299,99 / anno</div>
+      <ul>
+        <li>Risparmio del 15%</li>
+        <li>Tutti i vantaggi del mensile</li>
+        <li>Accesso prioritario a nuovi programmi</li>
+      </ul>
+      <a href="#" class="btn-purchase">Acquista ora</a>
+    </div>
+  </div>
+
+  <p>Non lasciare che i tuoi sogni restino solo sogni. <strong>Inizia oggi la tua trasformazione</strong> con Train with Savi e scopri quanto è bello sentirsi finalmente bene con se stessi.</p>
+</main>
+
+<footer>
+  &copy; 2025 Train with Savi. Tutti i diritti riservati.
+</footer>
+
+</body>
+</html>
